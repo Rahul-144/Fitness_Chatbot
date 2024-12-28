@@ -1,0 +1,46 @@
+'Whey Protein': [
+    "https://shop.bodybuilding.com/products/amazing-muscle-whey-protein-1",
+    "https://shop.bodybuilding.com/products/bodybuilding-signature-whey-protein",
+    "https://shop.bodybuilding.com/products/pro-supps-whey-isolate-1",
+    "https://shop.bodybuilding.com/products/ryno-power-premium-whey-protein",
+    "https://shop.bodybuilding.com/products/pro-supps-whey-concentrate",
+    "https://shop.bodybuilding.com/products/gym-molly-power-protein",
+    "https://shop.bodybuilding.com/products/prolab-nutrition-whey-isolate",
+    "https://shop.bodybuilding.com/products/performance-inspired-nutrition-isolate-whey-protein",
+    "https://shop.bodybuilding.com/products/forzagen-forza-whey-pro-protein",
+    "https://shop.bodybuilding.com/products/amazing-formulas-grass-fed-whey-isolate",
+    "https://shop.bodybuilding.com/products/6am-run-track-fuel",
+    "https://shop.bodybuilding.com/products/legion-whey-plus-whey-isolate-protein-powder"
+],
+'Whey Protein Isolate': [
+    "https://shop.bodybuilding.com/products/bodybuilding-signature-whey-protein-isolate",
+    "https://shop.bodybuilding.com/products/pro-supps-whey-isolate-1",
+    "https://shop.bodybuilding.com/products/ryno-power-premium-whey-protein",
+    "https://shop.bodybuilding.com/products/prolab-nutrition-whey-isolate",
+    "https://shop.bodybuilding.com/products/performance-inspired-nutrition-isolate-whey-protein",
+    "https://shop.bodybuilding.com/products/amazing-formulas-grass-fed-whey-isolate"
+],
+'Plant Protein': [
+    "https://shop.bodybuilding.com/products/thentic-plant-protein",
+    "https://shop.bodybuilding.com/products/snap-supplements-vegan-protein",
+    "https://shop.bodybuilding.com/products/legion-plant-plus-all-natural-plant-protein-powder",
+    "https://shop.bodybuilding.com/products/komplex-nutrition-plant-based-protein",
+    "https://shop.bodybuilding.com/products/portions-master-vegan-protein-blend",
+    "https://shop.bodybuilding.com/products/portions-master-plant-protein",
+    "https://shop.bodybuilding.com/products/ryno-power-plant-based-protein-powder",
+    "https://shop.bodybuilding.com/products/amazing-nutrition-amazing-formulas-pea-protein-powder",
+    "https://shop.bodybuilding.com/products/codeage-nanofood-wonder-d-plant-based"
+],
+'Protein Bars': [
+    "https://shop.bodybuilding.com/products/sport-pux-bar",
+    "https://shop.bodybuilding.com/products/performance-inspired-nutrition-inspired-bar-2-0",
+    "https://shop.bodybuilding.com/products/performance-inspired-nutrition-protein-cookie",
+    "https://shop.bodybuilding.com/products/legion-protein-cookies"
+],
+'STIMULANT FREE PRE-WORKOUT': [
+    "https://shop.bodybuilding.com/products/legion-pulse-pre-workout-stim-free",
+    "https://shop.bodybuilding.com/products/ryno-power-endurance-capsules",
+    "https://shop.bodybuilding.com/products/mri-performance-no2-nitic-oxide",
+    "https://shop.bodybuilding.com/products/mri-performance-no2-black",
+    "https://shop.bodybuilding.com/products/abe-no-stim-pump-powder"
+]
