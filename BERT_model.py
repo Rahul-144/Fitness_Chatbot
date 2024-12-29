@@ -15,7 +15,7 @@ for _, row in data.iterrows():
 
 # Convert the conversational pairs into a format suitable for BERT fine-tuning
 qa_data = []
-for pair in all_pairs:
+for pair in pairs:
     question = pair[0]
     answer = pair[1]
     
