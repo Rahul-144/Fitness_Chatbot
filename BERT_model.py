@@ -4,44 +4,14 @@ from datasets import Dataset
 from transformers import BertTokenizerFast, BertForQuestionAnswering, Trainer, TrainingArguments
 
 # Load the uploaded datasets
-cleaned_data_path = "Suppliment.csv"
-exercise_data_path = "exercise_dataset.csv"
+data = pd.read_json("conversational_pairs.json",lines=True)
+print(type(data))
+pairs = []
+for _, row in data.iterrows():
+        # Append tuples of (prompt, completion) to the pairs list
+    pairs.append((row["prompt"], row["completion"]))
 
-# Read the datasets
-cleaned_data = pd.read_csv(cleaned_data_path)
-exercise_data = pd.read_csv(exercise_data_path)
 
-# Extract conversational pairs from cleaned_data.csv
-def extract_cleaned_data_pairs(df):
-    pairs = []
-    for _, row in df.iterrows():
-        product = row.get("product_title", "this product")
-        if pd.notna(row.get("description")):
-            pairs.append((f"What is {product}?", row["description"]))
-        if pd.notna(row.get("directions")):
-            pairs.append((f"How do I use {product}?", row["directions"]))
-        if pd.notna(row.get("warning")):
-            pairs.append((f"Are there any warnings for {product}?", row["warning"]))
-        if pd.notna(row.get("goals")):
-            pairs.append((f"What are the benefits of {product}?", row["goals"]))
-    return pairs
-
-# Extract conversational pairs from exercise_dataset.csv
-def extract_exercise_data_pairs(df):
-    pairs = []
-    for _, row in df.iterrows():
-        exercise = row["title"]
-        pairs.append((f"What is {exercise}?", row["description"]))
-        pairs.append((f"How do I perform {exercise}?", row["steps"]))
-        pairs.append((f"What muscle groups does {exercise} target?", row["muscle_groups"]))
-    return pairs
-
-# Extract pairs from both datasets
-cleaned_data_pairs = extract_cleaned_data_pairs(cleaned_data)
-exercise_data_pairs = extract_exercise_data_pairs(exercise_data)
-
-# Combine all pairs from both datasets
-all_pairs = cleaned_data_pairs + exercise_data_pairs
 
 # Convert the conversational pairs into a format suitable for BERT fine-tuning
 qa_data = []
@@ -150,12 +120,6 @@ trainer.save_model("./fine_tuned_bert_model")
 tokenizer.save_pretrained("./fine_tuned_bert_tokenizer")
 
 # Optionally, save the formatted data (JSONL format for GPT fine-tuning or other models)
-formatted_data = [{"prompt": f"User: {pair[0]}\nBot:", "completion": f" {pair[1]}"} for pair in all_pairs]
-formatted_data_path = "conversational_pairs.json"
 
-with open(formatted_data_path, "w") as f:
-    for item in formatted_data:
-        json.dump(item, f)
-        f.write("\n")
 
 print("Fine-tuning complete and model saved.")
